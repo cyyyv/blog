@@ -6,12 +6,18 @@ import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
 const friendsPost = await getEntry("spec", "friends");
+const friendsTop = await getEntry("spec", "friends-top");
 
-if (!friendsPost) {
-	throw new Error("friends page content not found");
+if (!friendsPost || !friendsTop) {
+	throw new Error("Friends page content not found");
 }
 
-const { Content } = await render(friendsPost);
+const renderedTop = await render(friendsTop);
+const ContentTop = renderedTop.Content; 
+
+const renderedMain = await render(friendsPost);
+const ContentMain = renderedMain.Content; 
+
 const items = [
     {
 		title: "MIFENG BLOG",
@@ -47,7 +53,12 @@ const shuffledItems = shuffleArray(items);
 <MainGridLayout title={i18n(I18nKey.friends)} description={i18n(I18nKey.friends)}>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
+           
+            <Markdown>
+                <ContentTop />
+            </Markdown>
+
+             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
                 {shuffledItems.map((item) => (
                     <div class="flex flex-nowrap items-stretch h-28 gap-4 rounded-[var(--radius-large)]">
                         <div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900">
@@ -65,10 +76,13 @@ const shuffledItems = shuffleArray(items);
                     </div>
                 ))}
             </div>
+
             <hr class="border-t border-dashed border-neutral-200 dark:border-neutral-800 my-10" />
+            
             <Markdown class="mt-0">
-                <Content />
+                <ContentMain />
             </Markdown>
+            
         </div>
     </div>
 </MainGridLayout>

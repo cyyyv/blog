@@ -1,14 +1,32 @@
 ---
+import { getEntry, render } from "astro:content";
+import Markdown from "@components/misc/Markdown.astro";
 import ArchivePanel from "@components/ArchivePanel.svelte";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPostsList } from "../utils/content-utils";
 
+const archivePost = await getEntry("spec", "archive");
 const sortedPostsList = await getSortedPostsList();
+
+if (!archivePost) {
+	throw new Error("Archive page content not found");
+}
+
+const { Content } = await render(archivePost);
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
-    <ArchivePanel sortedPosts={sortedPostsList} client:only="svelte"></ArchivePanel>
+  <div class="block w-full rounded-[var(--radius-large)] relative min-h-32">
+    <div class="card-base z-10 px-9 py-6 relative w-full">
+        <Markdown>
+          <Content />
+        </Markdown>
+        <ArchivePanel sortedPosts={sortedPostsList} client:only="svelte" />
+         </div>
+      </div>
+    </div>
+  </div>
 </MainGridLayout>
 
