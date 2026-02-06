@@ -186,13 +186,19 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Friends,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
+			name: "赞助",
+			url: "/sponsors/",
+			icon: "tabler:coin-filled",
+		},
+		{
 			name: "隐私",
 			url: "/privacy/",
-			icon: "material-symbols:person",
+			icon: "material-symbols:person-shield",
 		},
 		{
 			name: "监测",
 			url: "https://status.goshujin.top",
+			icon: "material-symbols:monitoring-rounded",
 			external: true
 		},
 	],
