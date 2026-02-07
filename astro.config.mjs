@@ -67,7 +67,7 @@ export default defineConfig({
 			},
 		}),
 		expressiveCode({
-			themes: ["github-light", "github-dark"],
+			themes: ["github-dark", "github-dark"],
 			themeCSSSelector: (theme) => `[data-theme="${theme}"]`,
 			plugins: [
 				pluginCollapsibleSections(),

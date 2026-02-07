@@ -134,7 +134,7 @@ npm install hexo-deployer-git --save
 
 然后到你创建的文件夹目录下找到_config.yml 在末尾处修改deploy为
 
-```bash
+```yaml
 deploy:
   type: git
   repository: git@github.com:用户名/用户名.github.io.git
@@ -153,7 +153,7 @@ hexo d
 
 在你的域名解析商里设置CNAME解析到 用户名.github.io 或添加A记录为
 
-```bash
+```
 185.199.109.153
 185.199.110.153
 185.199.111.153
