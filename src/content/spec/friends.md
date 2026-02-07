@@ -1,6 +1,6 @@
 # 友链申请
 
-如果您也想加入我的友链，请按以下格式发送至 chuiyeaimiku@foxmail.com
+如果您也想加入我的友链，请按以下格式发送至 i@goshujin.top
 
 - 名称: 叶子のBlog
 

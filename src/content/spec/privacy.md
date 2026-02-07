@@ -143,7 +143,7 @@
 
 - QQ: 319213657
 
-- 邮箱: chuiyeaimiku@foxmail.com
+- 邮箱: i@goshujin.top
 
 - Telegram: https://t.me/chuiye114514
 

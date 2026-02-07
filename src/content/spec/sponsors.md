@@ -9,7 +9,7 @@
   </figure>
   <figure>
     <figcaption>支付宝</figcaption>
-    <img src="https://i0.hdslb.com/bfs/openplatform/b90f0fb63af08048a690de6245ed5930da3c2979.jpg@1e_1c.webp" alt="Alipay">
+    <img src="https://i0.hdslb.com/bfs/openplatform/bcde784165418e3f876c75d769fa463e8ed9f894.jpg@1e_1c.webp" alt="Alipay">
   </figure>
 </div>
 
@@ -55,4 +55,4 @@
 
 # 赞助名单
 
-如果您赞助了我并且希望被展示在此，请联系我 chuiyeaimiku@foxmail.com
+感谢投喂！赞助后若您想展示在此，请联系我 i@goshujin.top
