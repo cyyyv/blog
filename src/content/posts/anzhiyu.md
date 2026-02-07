@@ -40,7 +40,7 @@ cp -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml
 
 修改你博客目录下的 _config.yml 文件 找到theme 修改 theme 的值为 anzhiyu
 
-```bash
+```yaml
 theme: anzhiyu
 ```
 
@@ -60,16 +60,16 @@ hexo s
 hexo new page tags
 ```
 
-找到 你的博客目录 /source/tags/index.md 这个文件 修改为以下内容 时间自行替换 (请自行去除空格)
-```bash
-    ---
-    title: 标签
-    date: 2025-08-09 12:15:49
-    aside: false
-    type: "tags"
-    comments: false
-    top_img: false
-    ---
+找到 你的博客目录 /source/tags/index.md 这个文件 修改为以下内容 时间自行替换
+```markdown
+---
+title: 标签
+date: 2025-08-09 12:15:49
+aside: false
+type: "tags"
+comments: false
+top_img: false
+---
 ```
 
 2.在你博客目录下打开终端 输入以下内容生成分类页
@@ -78,17 +78,17 @@ hexo new page tags
 hexo new page categories
 ```
 
-找到 你的博客目录 /source/categories/index.md 这个文件 修改为以下内容 时间自行替换 (请自行去除空格)
+找到 你的博客目录 /source/categories/index.md 这个文件 修改为以下内容 时间自行替换
 
-```bash
-    ---
-    title: 分类
-    date: 2025-08-09 12:15:49
-    aside: false
-    type: "categories"
-    comments: false
-    top_img: false
-    ---
+```markdown
+---
+title: 分类
+date: 2025-08-09 12:15:49
+aside: false
+type: "categories"
+comments: false
+top_img: false
+---
 ```
 
 # 其它功能配置(可选)
@@ -103,13 +103,13 @@ npm install hexo-abbrlink --save
 
 然后打开你博客目录下的 _config.yml 文件(不是 _config.anzhiyu.yml 文件) 找到permalink 修改为以下内容
 
-```bash
+```yaml
 permalink: posts/:abbrlink/
 ```
 
 还是这个文件 到末尾处(或随便一个空白处)添加以下内容
 
-```bash
+```yaml
 # abbrlink config
 abbrlink:
   alg: crc32
@@ -124,18 +124,18 @@ abbrlink:
 npm install hexo-generator-topindex --save
 ```
 
-找到你要设置置顶的文章 添加top参数 以下为示例 (请自行去除空格)
+找到你要设置置顶的文章 添加top参数 以下为示例
 
-```bash
-    ---
-    title: 文章标题
-    date: 文章创建时间
-    top: 1
-    categories:
-    - 分类
-    tags:
-    - 标签
-    ---
+```markdown
+---
+title: 文章标题
+date: 文章创建时间
+top: 1
+categories:
+- 分类
+tags:
+- 标签
+---
 ```
 
 
