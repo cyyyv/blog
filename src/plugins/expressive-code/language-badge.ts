@@ -10,7 +10,7 @@ export function pluginLanguageBadge() {
       [data-language]::before {
         position: absolute;
         z-index: 2;
-        right: 0.5rem;
+        left: 0.5rem;
         top: 0.5rem;
         padding: 0.1rem 0.5rem;
         content: attr(data-language);
