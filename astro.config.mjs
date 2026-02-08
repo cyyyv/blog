@@ -101,9 +101,10 @@ export default defineConfig({
 					editorActiveTabIndicatorTopColor: "none",
 					editorTabBarBorderBottomColor: "var(--codeblock-topbar-bg)",
 					terminalTitlebarBorderBottomColor: "none",
-					copyButtonBackground: "var(--btn-regular-bg)",
-					copyButtonBackgroundHover: "var(--btn-regular-bg-hover)",
-					copyButtonBackgroundActive: "var(--btn-regular-bg-active)",
+					// 写死复制按钮的背景色，语言显示不变
+					copyButtonBackground: "#374151",
+					copyButtonBackgroundHover: "#4B5563",
+					copyButtonBackgroundActive: "#5A6B7A",
 					copyButtonForeground: "var(--btn-content)",
 				},
 				textMarkers: {
