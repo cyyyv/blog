@@ -18,23 +18,23 @@ image: 'https://i0.hdslb.com/bfs/openplatform/542bfb390a4e14ed475a1de8df8d446694
 
 Tips: 如果你发现安装速度太慢或无法安装 请切换网络
 
-1.安装Git
+1. 安装`Git`
 
-如果你是 Ubuntu 或者 Debian发行版 在终端设备中输入以下内容
+如果你是 Ubuntu 或者 Debian 发行版 在终端设备中输入以下内容
 
 ```bash
 sudo apt-get install git-core
 ```
 
-如果你是CentOS发行版 在终端设备中输入以下内容
+如果你是 CentOS 发行版 在终端设备中输入以下内容
 
 ```bash
 sudo yum install git-core
 ```
 
-2.安装Node.js
+2. 安装`Node.js`
 
-首先在终端输入以下内容 安装nvm
+首先在终端输入以下内容 安装`nvm`
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -46,7 +46,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 ```
 
-然后用nvm命令安装Node.js 这里安装的是LTS 你也可以换成其它版本
+然后用 nvm 命令安装 Node.js 这里安装的是LTS 你也可以换成其它版本
 
 ```bash
 nvm install --lts
@@ -60,7 +60,7 @@ npm --v
 
 # 安装Hexo
 
-输入以下内容安装Hexo
+输入以下内容安装`Hexo`
 
 ```bash
 npm install -g hexo-cli
@@ -68,7 +68,7 @@ npm install -g hexo-cli
 
 然后新建一个文件夹 并切换到这个文件夹目录
 
-输入以下内容完成Hexo初始化
+输入以下内容完成 Hexo 初始化
 
 ```bash
 hexo init
@@ -89,11 +89,11 @@ hexo s
 
 浏览器访问 http://localhost:4000 进行本地预览
 
-最后Ctrl+C关闭本地服务
+最后 `Ctrl+C` 关闭本地服务
 
 # 托管至Github Pages
 
-登录Github账号 创建一个新仓库 仓库名称为”你的用户名.github.io”
+登录 Github 账号 创建一个新仓库 仓库名称为`你的用户名.github.io`
 
 打开终端 输入以下内容
 
@@ -110,29 +110,29 @@ ssh-keygen -t rsa -C "你注册GitHub的邮箱"
 
 然后一路回车 不要设置密码 否则后续更新代码会频繁让你输入密码
 
-打开你home文件夹下的.ssh文件夹 找到 id_rsa.pub 文件并复制里面的内容
+打开你 `home` 文件夹下的 `.ssh` 文件夹 找到 `id_rsa.pub` 文件并复制里面的内容
 
-回到Github 点击你的头像 打开Settings页面 找到SSH and GPG keys 点击New SSH key
+回到Github 点击你的头像 打开 `Settings` 页面 找到`SSH and GPG keys` 点击`New SSH key`
 
 名称随便起一个你喜欢的 key内容粘贴你复制的公钥
 
-点击 Add SSH key 保存
+点击 `Add SSH key` 保存
 
-接着回到终端输入以下内容连接github
+接着回到终端输入以下内容连接Github
 
 ```bash
 ssh -T git@github.com
 ```
 
-输入yes 弹出 “Hi xxx! ….”就成功了
+输入yes 弹出 `Hi xxx! …` 就成功了
 
-回到终端 输入以下内容 安装Hexo插件
+回到终端 输入以下内容 安装 Hexo 插件
 
 ```bash
 npm install hexo-deployer-git --save
 ```
 
-然后到你创建的文件夹目录下找到_config.yml 在末尾处修改deploy为
+然后到你创建的文件夹目录下找到 `_config.yml` 在末尾处修改 `deploy` 为
 
 ```yaml
 deploy:
@@ -151,7 +151,7 @@ hexo d
 
 # 绑定域名(可选)
 
-在你的域名解析商里设置CNAME解析到 用户名.github.io 或添加A记录为
+在你的域名解析商里设置CNAME解析到 `用户名.github.io` 或添加A记录为
 
 ```
 185.199.109.153
@@ -160,8 +160,8 @@ hexo d
 185.199.108.153
 ```
 
-找到你创建的github仓库 点击齿轮打开仓库设置(不是点击你的头像的那个设置) 找到Pages 在Custom domain里输入你的域名
+找到你创建的 Github 仓库 点击齿轮打开仓库设置(不是点击你的头像的那个设置) 找到Pages 在 `Custom domain` 里输入你的域名
 
-最后在你博客文件夹下的source文件夹里添加一个CNAME文件 里面输入你的域名
+最后在你博客文件夹下的 `source` 文件夹里添加一个 `CNAME` 文件 里面输入你的域名
 
 到此你完成了搭建博客并托管至Github Pages 感谢观看
