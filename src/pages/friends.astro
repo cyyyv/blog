@@ -5,6 +5,8 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
+import { friends } from "../data/friends";
+
 const friendsPost = await getEntry("spec", "friends");
 const friendsTop = await getEntry("spec", "friends-top");
 
@@ -18,49 +20,10 @@ const ContentTop = renderedTop.Content;
 const renderedMain = await render(friendsPost);
 const ContentMain = renderedMain.Content; 
 
-const items = [
-    {
-		title: "小白のBlog",
-		imgurl: "https://r2cfimg.showby.top/2024/09/19/66eb06a884fb9.jpg",
-		desc: "Ciallo～(∠・ω< )⌒★",
-		siteurl: "https://www.showby.top/",
-	},
-    {
-		title: "kiyukie'Blog",
-		imgurl: "https://cdn.nodeimage.com/i/Q6NDWWd1h3I18zBNTwxFJABm5iKuGkuW.webp",
-		desc: "剑气纵横三万里，一剑光寒十九洲",
-		siteurl: "https://blog.030666.xyz/",
-	},
-    {
-		title: "MIFENG BLOG",
-		imgurl: "https://cdn.mfawa.top/image/logo.svg",
-		desc: "路漫漫其修远兮，吾将上下而求索",
-		siteurl: "https://blog.imbee.top/",
-	},
-    {
-		title: "AcoFork Blog",
-		imgurl: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=0",
-		desc: "Protect What You Love",
-		siteurl: "https://2x.nz",
-	},
-	{
-		title: "星辰の笔记",
-		imgurl: "https://blog.strarry.top/avatar.jpg",
-		desc: "Code | Think | Share | Repeat",
-		siteurl: "https://blog.strarry.top/",
-	},
-];
-
-function shuffleArray(array) {
-	const newArray = [...array];
-	for (let i = newArray.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-	}
-	return newArray;
-}
-
-const shuffledItems = shuffleArray(items);
+// 按首字母排序
+const sortedItems = [...friends].sort((a, b) => 
+    a.title.localeCompare(b.title, 'zh-CN', { sensitivity: 'accent' })
+);
 ---
 <MainGridLayout title={i18n(I18nKey.friends)}>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
@@ -71,7 +34,7 @@ const shuffledItems = shuffleArray(items);
             </Markdown>
 
              <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 my-4">
-                {shuffledItems.map((item) => (
+                {sortedItems.map((item) => (
                     <div class="flex flex-nowrap items-stretch h-28 gap-4 rounded-[var(--radius-large)]">
                         <div class="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200 dark:bg-zinc-900">
                             <img src={item.imgurl} alt="站点头像" class="w-full h-full object-cover">
