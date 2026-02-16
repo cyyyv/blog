@@ -28,8 +28,8 @@ export const siteConfig: SiteConfig = {
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 177, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: true, // 对访问者隐藏主题色选择器
+		hue: 176, // 我去，初音未来！
+		fixed: true, // 葱色锁定！
 	},
 
 	translate: {
