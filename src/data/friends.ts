@@ -8,6 +8,12 @@ export interface Friend {
 
 export const friends: Friend[] = [
     {
+        title: "Yourlai Blog",
+        imgurl: "https://cdn.cdn.yourlai.icu/img/logo/ava.png",
+        desc: "无bug是理想，调设备是日常",
+        siteurl: "https://yourlai.icu/",
+    },
+    {
         title: "小白のBlog",
         imgurl: "https://r2cfimg.showby.top/2024/09/19/66eb06a884fb9.jpg",
         desc: "Ciallo～(∠・ω< )⌒★",
