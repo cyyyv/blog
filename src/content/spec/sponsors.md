@@ -24,6 +24,13 @@
     margin-top: -1.5rem !important;
   }
   
+  /* 桌面端专属 */
+  @media (min-width: 768px) {
+    .sponsor-qrs {
+      gap: 80px; /* 图片间距 */
+    }
+  }
+  
   .sponsor-qrs figure {
     display: flex;
     flex-direction: column;
