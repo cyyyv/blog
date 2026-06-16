@@ -233,7 +233,9 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 			'page-width': `${PAGE_WIDTH}rem`,
 		}}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
-
+        <!-- 图床域名预连接预解析 -->
+        <link rel="preconnect" href="https://i0.hdslb.com" crossorigin>
+        <link rel="dns-prefetch" href="https://i0.hdslb.com">
 
 		<slot name="head"></slot>
 
